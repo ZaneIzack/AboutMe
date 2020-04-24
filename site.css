@@ -1,0 +1,416 @@
+﻿/* The sidenav */
+.sidenav {
+    height: 100vh;
+    min-width: 4em;
+    position: fixed;
+    background-color: #1b1b1b;
+    overflow: hidden;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    z-index: 1;
+}
+
+i {
+    color: #808000;
+    max-width: 4em;
+}
+
+.aboutme{
+    margin-left: 3px;
+}
+
+.home:hover i, .aboutme:hover i, .resume:hover i, .skills:hover i, .contact:hover i {
+    -webkit-transition: all 300ms ease-out;
+    color: transparent;
+}
+
+.home:hover:after, .aboutme:hover:after, .resume:hover:after, .skills:hover:after, .contact:hover:after {
+    content: attr(data-hover);
+    font-family: 'Oswald', sans-serif;
+    color: #008080;
+    position: absolute;
+    margin-top: .2em;
+    -webkit-transition: all 300ms ease-out;
+}
+
+.home:hover:after {
+    margin-left: -1.8em;
+}
+
+.aboutme:hover:after {
+    margin-left: -1.9em;
+}
+
+.resume:hover:after {
+    margin-left: -2.2em;
+}
+
+.skills:hover:after {
+    margin-left: -1.8em;
+}
+
+.contact:hover:after {
+    margin-left: -2.1em;
+}
+
+.links, .social, .logo{
+    justify-self: center;
+}
+
+.links {
+    align-self: center;
+}
+
+.logo{
+    align-self: start;
+}
+
+.social{
+    align-self: end;
+}
+
+.social{
+   justify-content: flex-end;
+}
+
+.logo img {
+    width: 3em;
+}
+
+/*All Pages*/
+.main {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    overflow-y: scroll;
+}
+
+.PageBody {
+    position: relative;
+    width: 80vw;
+    height: 100%;
+    margin-left: 12vw;
+}
+
+.Title {
+    font-family: 'Oswald', sans-serif;
+    color: #808000;
+    font-size: 10vh;
+    text-align: center;
+}
+
+.text {
+    font-family: 'Open Sans', sans-serif;
+    color: lightgray;
+    position: relative;
+    text-align: center;
+}
+
+.otext {
+    font-family: 'Open Sans', sans-serif;
+    color: lightgray;
+    position: relative;
+}
+
+.main::-webkit-scrollbar {
+    width: 10px;
+}
+
+.main::-webkit-scrollbar-track {
+    background: black;
+}
+
+.main::-webkit-scrollbar-thumb {
+    background: #008080;
+}
+
+    .main::-webkit-scrollbar-thumb:hover {
+        background: #00594e;
+    }
+
+.main::-webkit-scrollbar-corner{
+    background: black;
+}
+
+/*Index*/
+.ZaneCenter {
+    text-align: center;
+    width: 60vw;
+    position: fixed;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Zane {
+    font-family: 'Oswald', sans-serif;
+    color: #808000;
+    font-size: 15vh;
+}
+
+.Zsubtext {
+    font-family: 'Open Sans', sans-serif;
+    color: lightgray;
+    font-size: 5vh;
+}
+
+/*AboutMe*/
+.subtext {
+    font-family: 'Open Sans', sans-serif;
+    color: lightgray;
+    font-size: 3.5vh;
+    display: grid;
+    grid-template-columns: .5fr 1fr .5fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-gap: 10px;
+    justify-items: center;
+    align-items: center;
+}
+
+.responsive-img {
+    width: 10vw;
+    height: auto;
+}
+
+.Intern {
+    grid-row: 2/3;
+    grid-column: 2/3;
+}
+
+.Computer {
+    grid-row: 2/3;
+    grid-column: 3/4;
+}
+
+.Person {
+    grid-row: 3/4;
+    grid-column: 2/3;
+}
+
+.Skyline {
+    grid-row: 3/4;
+    grid-column: 1/2;
+}
+
+/*Resume*/
+.Rsubtext {
+    font-family: 'Oswald', sans-serif;
+    font-size: calc(35px + 1vh);
+    color: #008080;
+    margin-bottom: -1vh;
+}
+
+.indent {
+    padding-left: 5vh;
+    color: lightgray;
+    font-size: calc(16px + .5vh);
+}
+
+.objective, .experience, .education {
+    color: lightgray;
+}
+
+/*Skills*/
+.sr {
+    position: relative;
+    width: 80vw;
+    height: 100%;
+    margin-left: 12vw;
+}
+
+.card-title {
+    font-family: 'Oswald', sans-serif;
+    font-size: 8vh;
+    background-color: #008080;
+    color: black;
+}
+
+.card-text p {
+    font-size: 3vh;
+}
+
+.card-title, .card-text {
+    text-align: center;
+}
+
+.card-text {
+    color: lightgray;
+}
+
+.stext {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-column-gap: 20px;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+
+/*Contact*/
+.viewdata {
+    font-family: 'Oswald', sans-serif;
+    font-size: calc(22px + .5vh);
+    color: #808000;
+}
+
+#contactsheet {
+    position: relative;
+    width: 40vw;
+    display: inline-block;
+    margin-top: 5% !important;
+}
+
+input {
+    background-color: #1b1b1b;
+    border: none;
+    color: #008080;
+}
+
+    input:focus {
+        outline-color: #008080;
+    }
+
+textarea:focus {
+    outline-color: #008080;
+}
+
+.name, .email, .subject {
+    height: 8vh;
+}
+
+.subject {
+    margin-top: 3vh;
+    width: 100%;
+}
+
+textarea {
+    padding-top: 2vh;
+    height: 30vh;
+}
+
+textarea::-webkit-scrollbar {
+    width: 10px;
+}
+
+textarea::-webkit-scrollbar-track {
+    background: #1b1b1b;
+}
+
+textarea::-webkit-scrollbar-thumb {
+    background: #008080;
+}
+
+    textarea::-webkit-scrollbar-thumb:hover {
+        background: #00594e;
+    }
+
+    textarea::-webkit-scrollbar-corner {
+        background: #1b1b1b;
+    }
+    
+.message {
+    margin-top: 3vh;
+    width: 100%;
+    height: 30vh;
+    background-color: #1b1b1b;
+    border: none;
+    color: #008080;
+}
+
+    .message::-webkit-input-placeholder {
+        background-color: #1b1b1b;
+        border: none;
+    }
+
+.form-control {
+    float: right;
+    width: 5em;
+    margin-top: 1em;
+    background-color: #008080;
+    border-color: #008080;
+    color: black;
+}
+
+form .row {
+    justify-content: space-between;
+}
+
+.button {
+    border: solid;
+    border-color: #008080;
+    background: 0;
+    color: #008080;
+    text-align: center;
+}
+
+    .button p {
+        position: relative;
+        text-align: center;
+        vertical-align: central;
+        margin: auto;
+    }
+
+    .button:hover {
+        background: #008080;
+        color: black;
+    }
+
+    .button:active {
+        background: #008080;
+    }
+
+button:focus {
+    outline: none;
+}
+
+
+/*Media only below here*/
+@media only screen and (max-width: 1024px) {
+    .PageBody {
+        position: relative;
+        height: 100%;
+        width: 100%;
+        margin-left: 0 !important;
+        padding-left: 2em;
+    }
+
+    
+
+    .sr {
+        margin: 0 5em;
+    }
+}
+
+@media only screen and (max-width: 1000px) {
+    .message {
+        height: 10em;
+    }
+
+    .card-title {
+        font-size: 4vh;
+    }
+}
+
+@media only screen and (max-width: 720px) {
+    .ZaneCenter{
+        padding-left: 1em;
+    }
+    
+    .Zane {
+        font-size: calc(26px + 5vh);
+    }
+
+    .Zsubtext {
+        font-size: calc(16px + 2vh);
+    }
+}
+
+@media only screen and (max-width: 650px) {
+    .PageBody {
+        padding-left: 4em;
+    }
+    
+    .stext {
+        grid-template-columns: 1fr;
+    }
+}

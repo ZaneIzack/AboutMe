@@ -1,0 +1,27 @@
+﻿@page
+@model AboutMe.Pages.ContactModel
+@{
+    ViewData["Title"] = "Contact";
+}
+
+<div class="PageBody outline">
+    <div class="Title">Contact Me</div>
+    <div class="text cform">
+        <form method="post" id="contactsheet" autocomplete="off">
+            <div class="row">
+                <input class="col name" asp-for="mail.Name" placeholder="Name" style="margin-right: 10px;" />
+                <input class="col  email" asp-for="mail.Email" placeholder="Email" type="email" asp-validation-for="Email" />
+            </div>
+            <div class="row">
+                <input class="col subject" asp-for="mail.Subject" placeholder="Subject" />
+            </div>
+            <div class="row">
+                <textarea class="col message" asp-for="mail.Body" placeholder="Message" type="text"></textarea>
+            </div>
+            <button class="form-control button" type="submit" style="float: right" onclick="submitForm()"><p>Send</p></button>
+        </form>
+        <div class="viewdata">@ViewData["Message"]</div>
+    </div>
+</div>
+
+
